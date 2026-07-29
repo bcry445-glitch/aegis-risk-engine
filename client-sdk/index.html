@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEGIS SDK Test Environment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-blue-400">AEGIS Secure Login</h2>
+        <div class="mb-4">
+            <label class="block text-sm font-medium mb-2">Username or Email</label>
+            <input type="text" id="test-input" class="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500" placeholder="Type here to test telemetry...">
+        </div>
+        <button id="submit-btn" class="w-full bg-blue-600 hover:bg-blue-700 font-bold py-3 px-4 rounded transition-colors">
+            Simulate Authentication
+        </button>
+        <p id="status-text" class="mt-4 text-sm text-gray-400 text-center"></p>
+    </div>
+
+    <!-- Initialize our SDK -->
+    <script src="aegis.js"></script>
+</body>
+</html>

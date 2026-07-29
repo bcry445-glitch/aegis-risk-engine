@@ -1,0 +1,20 @@
+# Node Modules
+node_modules/
+npm-debug.log
+
+# Database Files (Do not commit live data)
+aegis.db
+*.sqlite
+*.sqlite3
+
+# Environment Variables
+.env
+.env.local
+
+# Build Outputs
+dist/
+build/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
