@@ -15,7 +15,7 @@ const TelemetrySimulator = () => {
     setStatus(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/v1/telemetry', {
+      const response = await fetch('https://aegis-risk-engine-a3z2.onrender.com/api/v1/telemetry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
