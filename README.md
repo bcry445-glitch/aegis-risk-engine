@@ -38,7 +38,7 @@ A comprehensive, full-stack threat intelligence and fraud investigation command 
 
 Ensure you have [Node.js](https://nodejs.org/) installed on your local environment.
 
-### 1. Backend Initialization
+### Backend Initialization
 
 The backend serves the REST API and manages the SQLite database.
 
@@ -101,14 +101,3 @@ aegis-risk-engine/
 **Muhammad Fazeel Khan**
 
 ````
-
-### 2. Push the Update to GitHub
-
-Once you have saved the updated `README.md`, open your terminal in the root `aegis-risk-engine` folder and run these commands to push the shiny new documentation live:
-
-```bash
-git add README.md
-git commit -m "docs: add live vercel and render deployment urls"
-git push
-
-```
