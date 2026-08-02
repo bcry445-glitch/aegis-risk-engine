@@ -2,6 +2,11 @@
 
 A comprehensive, full-stack threat intelligence and fraud investigation command center. AEGIS is designed to ingest device telemetry, cluster related threat footprints dynamically, and perform real-time Anti-Money Laundering (AML) sanctions screening.
 
+## 🌐 Live Deployments
+
+- **Investigator UI (Frontend):** [https://aegis-risk-engine-beta.vercel.app/](https://aegis-risk-engine-beta.vercel.app/)
+- **Risk Engine API (Backend):** `https://aegis-risk-engine-a3z2.onrender.com`
+
 ## 🌟 Core Features
 
 - **Live Telemetry Dashboard:** An auto-polling data command center that continuously fetches, evaluates, and displays active device sessions and their assigned threat statuses.
@@ -17,6 +22,7 @@ A comprehensive, full-stack threat intelligence and fraud investigation command 
 - **Build Tool:** Vite
 - **Styling:** Tailwind CSS (Dark-mode optimized analytical theme)
 - **Data Management:** Native Fetch API with background polling intervals
+- **Hosting:** Vercel
 
 ### Backend (Risk Engine API)
 
@@ -24,8 +30,9 @@ A comprehensive, full-stack threat intelligence and fraud investigation command 
 - **Framework:** Express.js
 - **Database:** SQLite3 (Serverless, local persistence)
 - **Algorithms:** `fast-levenshtein` (Fuzzy matching resolution)
+- **Hosting:** Render
 
-## 🚀 Installation & Setup
+## 🚀 Local Installation & Setup
 
 ### Prerequisites
 
@@ -34,65 +41,74 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your local environme
 ### 1. Backend Initialization
 
 The backend serves the REST API and manages the SQLite database.
-\`\`\`bash
 
+```bash
 # Navigate to the backend directory
-
 cd backend
 
 # Install necessary dependencies
-
 npm install express sqlite3 cors fast-levenshtein
 
 # Start the Node.js server (Defaults to Port 5000)
-
 node server.js
-\`\`\`
-_Upon successful startup, the server will initialize `aegis.db` and log the database connection status._
+```
+
+````
 
 ### 2. Frontend Initialization
 
 The frontend serves the React application and Investigator UI.
-\`\`\`bash
 
+```bash
 # Open a new terminal tab and navigate to the frontend directory
-
 cd frontend
 
 # Install the React environment dependencies
-
 npm install
 
 # Start the Vite development server
-
 npm run dev
-\`\`\`
-_Navigate to `http://localhost:5173` in your web browser to access the dashboard._
+
+```
 
 ## 📂 Project Structure
 
-\`\`\`text
+```text
 aegis-risk-engine/
 │
 ├── backend/
-│ ├── server.js # Express API, SQLite integration, Levenshtein logic
-│ ├── aegis.db # Auto-generated SQLite database
-│ └── package.json
+│   ├── server.js           # Express API, SQLite integration, Levenshtein logic
+│   ├── aegis.db            # Auto-generated SQLite database
+│   └── package.json
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── App.jsx # Application router and state wrapper
-│ │ ├── DashboardLayout.jsx # Global UI shell and sidebar navigation
-│ │ ├── Dashboard.jsx # Auto-polling Overview grid
-│ │ ├── NetworkGraph.jsx # Staggered orbital SVG clustering engine
-│ │ └── AmlScreening.jsx # Sanctions screening interface
-│ ├── package.json
-│ ├── tailwind.config.js
-│ └── vite.config.js
+│   ├── src/
+│   │   ├── App.jsx                 # Application router and state wrapper
+│   │   ├── DashboardLayout.jsx     # Global UI shell and sidebar navigation
+│   │   ├── Dashboard.jsx           # Auto-polling Overview grid
+│   │   ├── NetworkGraph.jsx        # Staggered orbital SVG clustering engine
+│   │   └── AmlScreening.jsx        # Sanctions screening interface
+│   ├── package.json
+│   ├── tailwind.config.js
+│   └── vite.config.js
 │
 └── README.md
-\`\`\`
+
+```
 
 ## 👤 Author
 
 **Muhammad Fazeel Khan**
+
+````
+
+### 2. Push the Update to GitHub
+
+Once you have saved the updated `README.md`, open your terminal in the root `aegis-risk-engine` folder and run these commands to push the shiny new documentation live:
+
+```bash
+git add README.md
+git commit -m "docs: add live vercel and render deployment urls"
+git push
+
+```
