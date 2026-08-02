@@ -8,7 +8,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchLiveData = () => {
-      fetch('https://aegis-risk-engine-a3z2.onrender.com/api/v1/telemetry')
+      fetch('https://aegis-risk-engine-a3z2.onrender.com/api/v1/devices')
         .then((res) => {
           if (!res.ok) throw new Error('API connection failed');
           return res.json();
